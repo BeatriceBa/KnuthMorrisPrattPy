@@ -1,5 +1,20 @@
 
 def searchKnuthMorris(pattern,text):
+    """
+    searchKnuthMorris function uses the Knuth Morris Pratt algoritm to perform pattern matching.
+    Core function of this module.
+
+    Args:
+        pattern (str): pattern (to be searched)
+        text (str): text 
+
+    Raises:
+        Exception: pattern not of type string
+        Exception: text not of type string
+
+    Returns:
+        list(integers): contains the indexes where the pattern is found in the text
+    """
     if isinstance(pattern, str) == False:
         raise Exception("The pattern is not of type string")
     if isinstance(text,str) == False:
@@ -41,10 +56,21 @@ def searchKnuthMorris(pattern,text):
     return result
 
 def computeLPSArray(pattern):
+    """
+    Utility function to calculate the LPS (Longest Proper Prefix that is also a Suffix) array.
+
+    Args:
+        pattern (str): pattern
+
+    Raises:
+        Exception: pattern not of type string
+
+    Returns:
+        array: the LPS array
+    """
     if isinstance(pattern, str) == False:
         raise Exception("The pattern is not of type string")
-
-    # Compute the Longest Proper Prefix that is also a Suffix array
+    
     i = 0
     j = 1
     
@@ -75,8 +101,3 @@ def computeLPSArray(pattern):
         else:
             i = arrayLPS[i-1]
     return arrayLPS
-
-pattern = "m a l"
-text = "b c m a l m n x y z"
-result = searchKnuthMorris(pattern,text)
-print(result)
