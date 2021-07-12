@@ -18,14 +18,22 @@ class testKMP(unittest.TestCase):
     def testSearchKnuthMorrisCheckEmptyString(self):
         pattern = ""
         text = "test"
+        
         with self.assertRaises(Exception):
             self.searchKnuthMorris(pattern,text)
     
+    def testSearchKnuthMorrisStringLen(self):
+        pattern = "veryveryverylongstring"
+        text = "text"
+        with self.assertRaises(Exception):
+            self.searchKnuthMorris(pattern,text)
+
     def testcomputeLPSArrayPatternIsString(self):
         pattern = 1
         text = "text"
         with self.assertRaises(Exception):
             self.computeLPSArray(pattern)
+    
 
 if __name__ == '__main__':
     unittest.main()

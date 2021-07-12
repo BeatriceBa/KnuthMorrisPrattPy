@@ -20,6 +20,8 @@ def searchKnuthMorris(pattern,text):
         raise Exception("The text is not of type string")
     if pattern is None or text is None or pattern == "" or text == "":
         raise Exception("One of the strings is not defined correctly")
+    if len(pattern) > len(text):
+        raise Exception("The pattern string is supposed to be shorter than the text")
 
     i = 0
     j = 0
