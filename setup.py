@@ -4,7 +4,6 @@ VERSION = '0.0.1'
 DESCRIPTION = 'A package implementing the Knuth Morris Pratt algorithm for pattern searching.'
 
 setup(
-
         name="knuthMorrisPratt", 
         url='https://github.com/BeatriceBa/KnuthMorrisPrattPy',
         version=VERSION,
