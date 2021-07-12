@@ -1,4 +1,3 @@
-
 def searchKnuthMorris(pattern,text):
     """
     searchKnuthMorris function uses the Knuth Morris Pratt algoritm to perform pattern matching.
@@ -19,6 +18,8 @@ def searchKnuthMorris(pattern,text):
         raise Exception("The pattern is not of type string")
     if isinstance(text,str) == False:
         raise Exception("The text is not of type string")
+    if pattern is None or text is None or pattern == "" or text == "":
+        raise Exception("One of the strings is not defined correctly")
 
     i = 0
     j = 0
@@ -70,6 +71,8 @@ def computeLPSArray(pattern):
     """
     if isinstance(pattern, str) == False:
         raise Exception("The pattern is not of type string")
+    if pattern is None or pattern == "":
+        raise Exception("Pattern is not defined correctly")
     
     i = 0
     j = 1
