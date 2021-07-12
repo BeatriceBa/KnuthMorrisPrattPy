@@ -1,0 +1,1 @@
+from .knuthMorrisPratt import searchKnuthMorris, computeLPSArray

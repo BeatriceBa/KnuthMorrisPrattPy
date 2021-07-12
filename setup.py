@@ -1,15 +1,26 @@
-from setuptools import setup, find_packages
+import setuptools
 
-VERSION = '0.0.1' 
-DESCRIPTION = 'A package implementing the Knuth Morris Pratt algorithm for pattern searching.'
+with open("README.md", "r", encoding="utf-8") as fh:
+    long_description = fh.read()
 
-setup(
-        name="knuthMorrisPratt", 
-        url='https://github.com/BeatriceBa/KnuthMorrisPrattPy',
-        version=VERSION,
-        author="Beatrice Baldassarre",
-        author_email="<beatrice.baldassarre@mail.polimi.it>",
-        description= DESCRIPTION,
-        long_description = open('README.md').read(),
-        packages=find_packages(),
+setuptools.setup(
+    name="knuthMorrisPratt",
+    version="0.0.1",
+    author="Beatrice Baldassarre",
+    author_email="beatrice.baldassarre@mail.polimi.it",
+    description="A package implementing the Knuth Morris Pratt algorithm for pattern searching.",
+    long_description=long_description,
+    long_description_content_type="text/markdown",
+    url="https://github.com/BeatriceBa/KnuthMorrisPrattPy",
+    project_urls={
+        "Bug Tracker": "https://github.com/BeatriceBa/KnuthMorrisPrattPy/issues",
+    },
+    classifiers=[
+        "Programming Language :: Python :: 3",
+        "License :: OSI Approved :: MIT License",
+        "Operating System :: OS Independent",
+    ],
+    package_dir={"": "src"},
+    packages=setuptools.find_packages(where="src"),
+    python_requires=">=3.6",
 )

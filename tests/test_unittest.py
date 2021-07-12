@@ -1,6 +1,6 @@
 import unittest
 
-from src.knuthMorrisPratt import *
+import src.knuthMorrisPratt 
 
 class testKMP(unittest.TestCase):
     def testSearchKnuthMorrisPatternIsString(self):
