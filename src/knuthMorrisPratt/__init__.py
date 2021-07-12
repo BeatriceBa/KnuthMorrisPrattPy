@@ -1,1 +1,0 @@
-from .KnuthMorrisPratt import *
