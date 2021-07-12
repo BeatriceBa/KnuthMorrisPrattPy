@@ -106,8 +106,3 @@ def computeLPSArray(pattern):
         else:
             i = arrayLPS[i-1]
     return arrayLPS
-
-text = "trentatre trentini entrarono a trento"
-pattern = "tre"
-#KMPSearch(pattern,text)
-print(searchKnuthMorris(pattern,text))
