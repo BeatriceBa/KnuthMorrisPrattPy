@@ -36,24 +36,26 @@ def searchKnuthMorris(pattern,text):
     # the i index is never decremented, allowing us to 
     # examine the string text just once
     while i < len(text):      
+        # If the two characters match, increment both indexes
+        if text[i] == pattern[j]:
+            i += 1
+            j += 1
+        
         # If we were able to match the whole pattern, 
         # store the index where the pattern starts. 
-        if j == (len(pattern) - 1):
+        if j == len(pattern):
             result.append(i-j)
             j = arrayLPS[j-1]
         
-        # Otherwise if the two characters match, increment both indexes
-        elif text[i] == pattern[j]:
-            i += 1
-            j += 1
         # Otherwise if they do not match and j is not equal to 0, check
-        # the value stored in the previous cell [j-1] and let j assume
+        # the value stored in the previous cell [j-1] and let j get
         # that value
-        elif text[i] != pattern[j] and j!=0:
-            j = arrayLPS[j-1]
-        # Otherwise (if they do not match and j is equal to 0) increment i
-        else:
-            i += 1
+        elif text[i] != pattern[j]:
+            if j!=0:
+                j = arrayLPS[j-1]
+            # Otherwise (if they do not match and j is equal to 0) increment i
+            else:
+                i += 1
     return result
 
 def computeLPSArray(pattern):
@@ -104,3 +106,8 @@ def computeLPSArray(pattern):
         else:
             i = arrayLPS[i-1]
     return arrayLPS
+
+text = "trentatre trentini entrarono a trento"
+pattern = "tre"
+#KMPSearch(pattern,text)
+print(searchKnuthMorris(pattern,text))
