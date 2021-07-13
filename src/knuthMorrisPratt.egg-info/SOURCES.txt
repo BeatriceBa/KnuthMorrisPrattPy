@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+src/knuthMorrisPratt/__init__.py
+src/knuthMorrisPratt/knuthMorrisPratt.py
+src/knuthMorrisPratt.egg-info/PKG-INFO
+src/knuthMorrisPratt.egg-info/SOURCES.txt
+src/knuthMorrisPratt.egg-info/dependency_links.txt
+src/knuthMorrisPratt.egg-info/top_level.txt
