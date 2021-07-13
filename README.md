@@ -31,9 +31,9 @@ Install the Wheel file via pip
 `pip install knuthMorrisPratt-0.0.1-py3-none-any.whl`
 
 Test the package
-`py
-from knuthMorrisPratt import searchKnuthMorris
-print(searchKnuthMorris("ll,""apellefigliodapollofeceunapalladipelledipollo""))`
+`py`
+`from knuthMorrisPratt import searchKnuthMorris`
+`print(searchKnuthMorris("ll","apellefigliodapollofeceunapalladipelledipollo"))`
 
 When you finish, deactivate the virtual environment
 `deactivate`
