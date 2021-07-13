@@ -24,8 +24,8 @@ computeLPSArray is a utility function to calculate the LPS (Longest Proper Prefi
 Move into the directory where there is the Wheel file *knuthMorrisPratt-0.0.1-py3-none-any.whl*
 
 Create a virtual environment (commands listed are for Windows)
-`py -m venv env
-.\env\Scripts\activate`
+`py -m venv env`
+`.\env\Scripts\activate`
 
 Install the Wheel file via pip
 `pip install knuthMorrisPratt-0.0.1-py3-none-any.whl`
